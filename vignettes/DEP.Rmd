@@ -119,7 +119,7 @@ Additionally, some proteins do not have an annotated gene name and for those we 
 data_unique <- make_unique(data, "Gene.names", "Protein.IDs", delim = ";")
 
 # Are there any duplicated names?
-data$name %>% duplicated() %>% any()
+data_unique$name %>% duplicated() %>% any()
 ```
 
 ## Generate a SummarizedExperiment object
